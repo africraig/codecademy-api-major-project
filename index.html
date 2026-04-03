@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Codecademy Stock Lookup Using Native JavaScript Major Project">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap">
+  <meta name="author" content="africraig">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Codecademy Stock Search Project</title>
+  <link href="./css/styles.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="./scripts/script.js" defer></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <header class="bg-dark text-light py-3 shadow-sm sticky-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="fs-3">Stock Portfolio Tracker</p>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-center gap-2">
+          <div class="fs-6 text-light">Portfolio Value:</div>
+          <div class="fs-6 text-light" id="total">$0.00</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="my-4 flex-grow-1">
+
+    <section class="container mb-4">
+      <div class="card p-3">
+        <h2>Stock Search</h2>
+        <div class="d-flex gap-2 mt-2">
+          <input id="search" class="form-control" placeholder="Enter stock ticker or name">
+          <button id="searchBtn" class="btn btn-outline-secondary">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mb-4">
+      <div class="card p-3">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <h5 id="companyTicker">Ticker</h5>
+            <small id="companyName" class="text-muted">Company</small>
+          </div>
+          <span id="priceChangeElement" class="badge"></span>
+        </div>
+        <h2 id="stockPrice" class="fw-bold mb-4 text-center">$0.00</h2>
+        <div class="row text-center mb-3">
+          <div class="col"><small class="text-muted">Open</small>
+            <div id="open">0</div>
+          </div>
+          <div class="col"><small class="text-muted">High</small>
+            <div id="high">0</div>
+          </div>
+          <div class="col"><small class="text-muted">Low</small>
+            <div id="low">0</div>
+          </div>
+          <div class="col"><small class="text-muted">Volume</small>
+            <div id="volume">0</div>
+          </div>
+        </div>
+        <div class="d-flex gap-2 justify-content-end">
+          <button id="watchlistBtn" class="btn btn-outline-secondary">Add to Watchlist</button>
+          <button id="portfolioBtn" class="btn btn-outline-secondary">Add to Portfolio</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mb-4">
+      <h3>Portfolio</h3>
+      <div id="portfolioList" class="card border p-3"></div>
+    </section>
+
+    <section class="container mb-4">
+      <h3>Watchlist</h3>
+      <div id="watchlist" class="card border p-3"></div>
+    </section>
+
+  </main>
+
+  <footer class="bg-dark py-3 text-center text-light">
+    Codecademy Week 8 Native JavaScript Stock Lookup
+  </footer>
+
+</body>
+
+</html>
